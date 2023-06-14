@@ -1,0 +1,27 @@
+.containerMain {
+    min-height: 73vh;
+
+}
+.cartProduct {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 3rem;  
+    align-items: center;
+    font-size: 1.5rem;
+
+}
+.cartContainer {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+.btnCartDelete {
+    cursor: pointer;
+}
+.cartEmpty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    font-size: 2rem;
+    flex-direction: column;
+}
