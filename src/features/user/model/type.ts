@@ -1,7 +1,7 @@
-import { ProductI } from '../../product/model/type';
+import { ProductIOld } from '../../product/model/type';
 
 export type Order = {
-    productId: ProductI;
+    productId: ProductIOld;
     amount: number;
 };
 export type Role = 'user' | 'admin';

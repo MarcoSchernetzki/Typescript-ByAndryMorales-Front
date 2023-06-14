@@ -1,7 +1,7 @@
-import { ProductI } from '../../../product/model/type';
+import { ProductIOld } from '../../../product/model/type';
 import Styles from '../../productPage/productPage.module.css';
 
-function AppointmentItem({ item }: { item: ProductI }) {
+function AppointmentItem({ item }: { item: ProductIOld }) {
     return (
         <div className={Styles.containerProduct}>
             <img

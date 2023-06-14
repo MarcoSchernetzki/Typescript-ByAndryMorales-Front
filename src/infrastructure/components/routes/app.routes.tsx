@@ -1,11 +1,11 @@
 import { Navigate, Routes, Route } from 'react-router-dom';
 import AppointmentPage from '../../../features/pages/AppointmentPage/appointmentPage';
 import CartPage from '../../../features/pages/cartPage/cartPage';
-import HomePage from '../../../features/pages/homePage/home.page';
 import LoginPage from '../../../features/pages/loginPage/loginPage';
 import ProductPage from '../../../features/pages/productPage/productPage';
 import Register from '../../../features/pages/registerPage/register';
 import { PrivateRoute } from './routesPrivate';
+import { HomePage } from '../../../features/pages/home.page/home.page';
 
 export function AppRoutes() {
     return (

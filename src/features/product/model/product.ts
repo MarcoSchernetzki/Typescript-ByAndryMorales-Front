@@ -1,5 +1,5 @@
 export type Category = 'producto' | 'servicio';
-export type Area = 'ceja' | 'pestaña' | 'manicura';
+export type Area = 'cejas' | 'pestañas' | 'manicura';
 
 export type ProtoProductI = {
     id?: string;
@@ -9,11 +9,12 @@ export type ProtoProductI = {
     category?: Category;
     area?: Area;
     description?: string;
+    duration?: string;
     isAvailable?: boolean;
     clients?: Array<string>;
 };
 
-export type ProductIOld = {
+export type ProductI = {
     id?: string;
     name: string;
     image: string;
@@ -21,6 +22,7 @@ export type ProductIOld = {
     category: Category;
     area: Area;
     description: string;
+    duration: string;
     isAvailable: boolean;
     clients: Array<string>;
 };

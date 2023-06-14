@@ -3,9 +3,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { rootState } from '../../../infrastructure/store/store';
 import { ProductRepository } from '../service/productRepository';
 import * as ac from '../reducer/action.creator';
-import { ProductI } from '../model/type';
+import { ProductIOld } from '../model/type';
+import { useNavigate } from 'react-router';
+import { ProductI } from '../model/product';
 
 export const useProduct = () => {
+    const navigate = useNavigate();
     const products = useSelector((state: rootState) => state.products);
     const dispatcher = useDispatch();
     const apiProduct = useMemo(() => new ProductRepository(), []);
@@ -17,18 +20,18 @@ export const useProduct = () => {
         //.catch((error: Error) => console.log(error.name, error.message));
     }, [apiProduct, dispatcher]);
 
-    const handleAdd = (newProduct: ProductI) => {
-        apiProduct.createProduct(newProduct).then((products: ProductI) => {
+    const handleAdd = (newProduct: ProductIOld) => {
+        apiProduct.createProduct(newProduct).then((products: ProductIOld) => {
             dispatcher(ac.addActionProduct(products));
         });
     };
     const handleUpdate = (
         id: string | undefined,
-        updateProduct: Partial<ProductI>
+        updateProduct: Partial<ProductIOld>
     ) => {
         apiProduct
             .updateProduct(id, updateProduct)
-            .then((product: ProductI) =>
+            .then((product: ProductIOld) =>
                 dispatcher(ac.updateActionProduct(product))
             );
     };
@@ -38,10 +41,21 @@ export const useProduct = () => {
         });
     };
 
+    const handleSelect = (product: ProductI) => {
+        apiProduct
+            .getProduct(product.id as string)
+            .then(() => {
+                dispatcher(ac.selectActionCreator(product));
+                navigate('/details');
+            })
+            .catch((error: Error) => console.log(error.name, error.message));
+    };
+
     return {
         products,
         handleAdd,
         handleUpdate,
         handleDelete,
+        handleSelect,
     };
 };

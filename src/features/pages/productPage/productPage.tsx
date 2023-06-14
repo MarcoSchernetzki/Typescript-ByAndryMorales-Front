@@ -3,12 +3,11 @@ import { useProduct } from '../../product/hook/useProduct';
 import {
     Area,
     Category,
-    ProductI,
+    ProductIOld,
     ProtoProductI,
 } from '../../product/model/type';
 import { useUser } from '../../user/hook/useUser';
 import { User } from '../../user/model/type';
-import HomeList from '../homePage/homeList/homeList';
 import ProductList from './productList/productList';
 import Styles from './productPage.module.css';
 
@@ -33,7 +32,7 @@ function ProductPage() {
     };
     const handleClick = (ev: SyntheticEvent) => {
         ev.preventDefault();
-        handleAdd(formState as ProductI);
+        handleAdd(formState as ProductIOld);
     };
 
     return (
@@ -140,15 +139,11 @@ function ProductPage() {
                     <ul>
                         <ProductList item={products} />
                     </ul>
-                    <div className={Styles.productList}>
-                        <HomeList item={products} key={Math.random() * 233} />
-                    </div>
+                    <div className={Styles.productList}></div>
                 </>
             ) : (
                 <main className={Styles.containerProduct}>
-                    <div className={Styles.productList}>
-                        <HomeList item={products} key={Math.random() * 233} />
-                    </div>
+                    <div className={Styles.productList}></div>
                 </main>
             )}
         </>
