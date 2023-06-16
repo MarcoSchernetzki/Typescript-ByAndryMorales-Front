@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { Menu } from '../menu/menu';
 import Styles from './header.module.css';
 
 export function Header() {
@@ -15,9 +14,6 @@ export function Header() {
                             width="70px"
                         />
                     </Link>
-                </div>
-                <div className={Styles.menuNav}>
-                    <Menu />
                 </div>
             </div>
         </header>

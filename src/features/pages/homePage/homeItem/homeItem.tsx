@@ -1,16 +1,9 @@
-import { ProductI } from '../../../product/model/type';
-import { useUser } from '../../../user/hook/useUser';
+import { ProductI } from '../../../product/model/product';
 import Styles from './homeItem.module.css';
 
 export function HomeItem({ item }: { item: ProductI }) {
-    const { handleAddCart } = useUser();
-
-    const handleClick = () => {
-        handleAddCart({ productId: item, amount: 1 });
-    };
-
     return (
-        <div className={Styles.containerProduct} onClick={handleClick}>
+        <div className={Styles.containerProduct}>
             <img
                 className={Styles.productImage}
                 src={item.image}

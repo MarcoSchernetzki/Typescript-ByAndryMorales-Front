@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a0e5d760.css",
+    "main.js": "/static/js/main.7e48cc22.js",
+    "static/media/logo-y-marca-new.jpg": "/static/media/logo-y-marca-new.c768325114bbdbe833d1.jpg",
+    "static/media/ceja.jpg": "/static/media/ceja.8744af2c0b30cd1bc17f.jpg",
+    "index.html": "/index.html",
+    "main.a0e5d760.css.map": "/static/css/main.a0e5d760.css.map",
+    "main.7e48cc22.js.map": "/static/js/main.7e48cc22.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a0e5d760.css",
+    "static/js/main.7e48cc22.js"
+  ]
+}

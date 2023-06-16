@@ -1,9 +1,9 @@
-import { useProduct } from '../../product/hook/useProduct';
+import { data } from '../../../infrastructure/data/data';
 import Styles from './home.Page.module.css';
 import HomeList from './homeList/homeList';
 
 function HomePage() {
-    const { products } = useProduct();
+    const products = data;
     return (
         <main className={Styles.main}>
             <div className={Styles.photoLogo}>

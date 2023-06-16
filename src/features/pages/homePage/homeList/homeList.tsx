@@ -1,6 +1,6 @@
-import { ProductI } from '../../../product/model/type';
 import { HomeItem } from '../homeItem/homeItem';
 import Styles from '../home.Page.module.css';
+import { ProductI } from '../../../product/model/product';
 
 function HomeList({ item }: { item: Array<ProductI> }) {
     return (
