@@ -41,9 +41,10 @@ export const HomePage = () => {
                         <button
                             className="button-appoint"
                             onClick={() => {
-                                window.location.assign(
-                                    'https://widget.treatwell.es/establecimiento/100043880/servicios/'
-                                );
+                                // window.location.assign(
+                                //     'https://widget.treatwell.es/establecimiento/100043880/servicios/'
+                                // );
+                                console.log('prueba');
                             }}
                         >
                             Pide tu Cita
