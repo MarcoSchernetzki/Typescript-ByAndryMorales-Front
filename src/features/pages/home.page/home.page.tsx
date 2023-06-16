@@ -1,6 +1,4 @@
-import { useKeenSlider } from 'keen-slider/react';
 import './home.page.css';
-import 'keen-slider/keen-slider.min.css';
 import {
     DataComentType,
     dataCertificate,
@@ -9,42 +7,6 @@ import {
 import { ServicesList } from '../services.list/services.list';
 
 export function HomePage() {
-    const [sliderRef] = useKeenSlider<HTMLDivElement>(
-        {
-            loop: true,
-        },
-        [
-            (slider) => {
-                let timeout: ReturnType<typeof setTimeout>;
-                let mouseOver = false;
-                function clearNextTimeout() {
-                    clearTimeout(timeout);
-                }
-                function nextTimeout() {
-                    clearTimeout(timeout);
-                    if (mouseOver) return;
-                    timeout = setTimeout(() => {
-                        slider.next();
-                    }, 5000);
-                }
-                slider.on('created', () => {
-                    slider.container.addEventListener('mouseover', () => {
-                        mouseOver = true;
-                        clearNextTimeout();
-                    });
-                    slider.container.addEventListener('mouseout', () => {
-                        mouseOver = false;
-                        nextTimeout();
-                    });
-                    nextTimeout();
-                });
-                slider.on('dragStarted', clearNextTimeout);
-                slider.on('animationEnded', nextTimeout);
-                slider.on('updated', nextTimeout);
-            },
-        ]
-    );
-
     return (
         <>
             <main>
@@ -56,10 +18,7 @@ export function HomePage() {
                         width="100%"
                     />
                 </div>
-                <div
-                    ref={sliderRef}
-                    className="keen-slider container-certificate"
-                >
+                <div className="keen-slider container-certificate">
                     {dataCertificate.map((item: string, index: number) => {
                         return (
                             <li
@@ -94,7 +53,7 @@ export function HomePage() {
                 <div className="container-keen-slider">
                     <div className="container-line" />
                     <p>Mis clientes dicen</p>
-                    <div ref={sliderRef} className="keen-slider comments">
+                    <div className="keen-slider comments">
                         {dataComent.map((item: DataComentType) => {
                             return (
                                 <img
