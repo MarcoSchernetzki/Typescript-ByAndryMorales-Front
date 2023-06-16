@@ -1,10 +1,10 @@
-import './home.page.css';
+import './homePage.css';
 import {
     DataComentType,
     dataCertificate,
     dataComent,
 } from '../../../infrastructure/data/data';
-import { ServicesList } from '../services.list/services.list';
+import { ServicesList } from '../servicesList/servicesList';
 
 export function HomePage() {
     return (

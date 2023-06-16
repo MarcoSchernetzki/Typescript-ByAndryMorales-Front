@@ -1,5 +1,5 @@
 import { Navigate, Routes, Route } from 'react-router-dom';
-import { HomePage } from '../../../features/pages/home.page/home.page';
+import { HomePage } from '../../../features/pages/homePage/homePage';
 
 export function AppRoutes() {
     return (

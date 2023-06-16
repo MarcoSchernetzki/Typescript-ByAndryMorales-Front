@@ -1,4 +1,4 @@
-import './services.list.css';
+import './servicesList.css';
 import { data } from '../../../infrastructure/data/data';
 import { ProductI } from '../../product/model/product';
 

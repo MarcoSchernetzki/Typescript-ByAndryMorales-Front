@@ -1,5 +1,5 @@
 import { Layout } from '../layout/layout';
-import { AppRoutes } from '../routes/app.routes';
+import { AppRoutes } from '../routes/appRoutes';
 
 export function App() {
     return (
