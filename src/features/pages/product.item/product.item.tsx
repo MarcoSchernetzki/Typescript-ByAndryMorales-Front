@@ -1,7 +1,7 @@
 import { ProductI } from '../../product/model/product';
 import './product.item.css';
 
-export const ProductItem = ({ item }: { item: ProductI }) => {
+export function ProductItem({ item }: { item: ProductI }) {
     return (
         <>
             <div className="container-service-item">
@@ -21,4 +21,4 @@ export const ProductItem = ({ item }: { item: ProductI }) => {
             </div>
         </>
     );
-};
+}
