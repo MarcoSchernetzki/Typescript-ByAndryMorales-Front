@@ -1,11 +1,11 @@
 import { useProduct } from '../../../product/hook/useProduct';
-import { ProductIOld } from '../../../product/model/type';
+import { ProductI } from '../../../product/model/type';
 import Styles from '../productPage.module.css';
 
-function ProductList({ item }: { item: Array<ProductIOld> }) {
+function ProductList({ item }: { item: Array<ProductI> }) {
     const { handleDelete } = useProduct();
 
-    const handleClick = (item: ProductIOld) => {
+    const handleClick = (item: ProductI) => {
         handleDelete(item.id as string);
     };
     return (

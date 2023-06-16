@@ -3,5 +3,4 @@ export const actionProduct = {
     delete: 'Product@delete',
     update: 'Product@update',
     load: 'Product@load',
-    select: 'appointment@select',
 };

@@ -13,7 +13,7 @@ export type ProtoProductI = {
     clients?: Array<string>;
 };
 
-export type ProductIOld = {
+export type ProductI = {
     id?: string;
     name: string;
     image: string;

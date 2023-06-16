@@ -1,8 +1,8 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { ProductIOld } from '../model/type';
+import { ProductI } from '../model/type';
 import * as ac from './action.creator';
 
-const initialState: Array<ProductIOld> = [];
+const initialState: Array<ProductI> = [];
 
 export const productReducer = createReducer(initialState, (builder) => {
     builder.addCase(ac.loadActionProduct, (_state, action) => action.payload);

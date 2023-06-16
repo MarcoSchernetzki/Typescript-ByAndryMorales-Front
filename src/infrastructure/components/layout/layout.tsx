@@ -1,7 +1,7 @@
 import { Footer } from '../footer/footer';
 import { Header } from '../header/header';
 
-export const Layout = ({ children }: { children: JSX.Element }) => {
+export function Layout({ children }: { children: JSX.Element }) {
     return (
         <>
             <Header></Header>
@@ -9,4 +9,4 @@ export const Layout = ({ children }: { children: JSX.Element }) => {
             <Footer></Footer>
         </>
     );
-};
+}

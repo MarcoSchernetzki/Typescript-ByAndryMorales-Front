@@ -1,7 +1,7 @@
-import { ProductIOld } from '../model/type';
+import { ProductI } from '../model/type';
 import { ProductRepo } from './productRepo';
 
-export class ProductRepository implements ProductRepo<ProductIOld> {
+export class ProductRepository implements ProductRepo<ProductI> {
     urlBase: string;
     constructor(url = '') {
         this.urlBase = 'http://localhost:3200/product';
@@ -12,7 +12,7 @@ export class ProductRepository implements ProductRepo<ProductIOld> {
         error.name = 'HTTPError';
         return error;
     }
-    findAll(): Promise<Array<ProductIOld>> {
+    findAll(): Promise<Array<ProductI>> {
         return fetch(`${this.urlBase}`)
             .then((response) => response.json())
             .then((resp) => resp.products)
@@ -20,14 +20,14 @@ export class ProductRepository implements ProductRepo<ProductIOld> {
                 return `${error}`;
             });
     }
-    findOne(id: string): Promise<ProductIOld> {
+    findOne(id: string): Promise<ProductI> {
         return fetch(`${this.urlBase}/${id}`)
             .then((response) => response.json())
             .catch((error) => {
                 return `${error}`;
             });
     }
-    createProduct(product: ProductIOld): Promise<ProductIOld> {
+    createProduct(product: ProductI): Promise<ProductI> {
         return fetch(`${this.urlBase}/`, {
             method: 'POST',
             body: JSON.stringify(product),
@@ -43,8 +43,8 @@ export class ProductRepository implements ProductRepo<ProductIOld> {
     }
     updateProduct(
         id: string | undefined,
-        partialProduct: Partial<ProductIOld>
-    ): Promise<ProductIOld> {
+        partialProduct: Partial<ProductI>
+    ): Promise<ProductI> {
         return fetch(`${this.urlBase}/${id}`, {
             method: 'PATCH',
             body: JSON.stringify(partialProduct),
@@ -68,13 +68,6 @@ export class ProductRepository implements ProductRepo<ProductIOld> {
             .then((response) => {
                 return response.json();
             })
-            .catch((error) => {
-                return `${error}`;
-            });
-    }
-    async getProduct(id: string): Promise<ProductIOld> {
-        return fetch(`${this.urlBase}/${id}`)
-            .then((response) => response.json())
             .catch((error) => {
                 return `${error}`;
             });
