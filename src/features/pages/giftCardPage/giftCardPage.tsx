@@ -67,30 +67,42 @@ export const GiftCardPage = () => {
                     </p>
                 </div>
                 <form onSubmit={handleSubmit}>
-                    <label>
-                        <input
-                            type="number"
-                            name="amount"
-                            placeholder="Cantidad"
-                            onInput={handleInput}
-                            required
-                        />
-                    </label>
-                    <label>
-                        <input
-                            type="text"
-                            name="money"
-                            placeholder="Monto (€)"
-                            onInput={handleInput}
-                            required
-                        />
-                    </label>
+                    <select
+                        name="amount"
+                        className="form-input select"
+                        onInput={handleInput}
+                        required
+                    >
+                        <option disabled selected>
+                            Cantidad de Tarjetas
+                        </option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <select
+                        name="money"
+                        onInput={handleInput}
+                        className="form-input select"
+                        required
+                    >
+                        <option disabled selected>
+                            Monto (€)
+                        </option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="75">75</option>
+                        <option value="100">100</option>
+                    </select>
                     <label>
                         <input
                             type="email"
                             name="email"
                             placeholder="Email del destinatario"
                             onInput={handleInput}
+                            className="form-input"
                             required
                         />
                     </label>
@@ -101,6 +113,7 @@ export const GiftCardPage = () => {
                             placeholder="Nombre del destinatario"
                             maxLength={16}
                             onInput={handleInput}
+                            className="form-input"
                             required
                         />
                     </label>
@@ -110,6 +123,7 @@ export const GiftCardPage = () => {
                             name="message"
                             placeholder="Mensaje"
                             onInput={handleInput}
+                            className="form-input"
                             required
                         />
                     </label>
@@ -117,6 +131,7 @@ export const GiftCardPage = () => {
                         type="hidden"
                         name="_next"
                         value="http://localhost:3000"
+                        className="form-input"
                     />
                     <input type="hidden" name="_captcha" value="false" />
                     <div className="giftCard-button">
