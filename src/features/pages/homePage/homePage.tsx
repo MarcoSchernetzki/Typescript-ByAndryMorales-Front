@@ -1,5 +1,5 @@
 import { useKeenSlider } from 'keen-slider/react';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import './homePage.css';
 import 'keen-slider/keen-slider.min.css';
 import {
@@ -13,7 +13,7 @@ import { ProductContext } from '../../../infrastructure/context/context';
 import { Loader } from '../../../infrastructure/core/loader/loader';
 
 export const HomePage = () => {
-    const { handleLoader } = useContext(ProductContext);
+    const { isLoaded, handleLoader } = useContext(ProductContext);
 
     const [sliderRef] = useKeenSlider<HTMLDivElement>(
         {
@@ -51,8 +51,18 @@ export const HomePage = () => {
         ]
     );
 
-    return handleLoader() ? (
+    useEffect(() => {
+        if (!isLoaded) {
+            document.body.style.overflow = 'hidden';
+        }
+        return () => {
+            document.body.style.overflow = 'scroll';
+        };
+    }, [isLoaded]);
+
+    return (
         <>
+            {!handleLoader() && <Loader />}
             <div className="container-highlight">
                 <img
                     className="highlight-image"
@@ -102,7 +112,5 @@ export const HomePage = () => {
                 <ButtonAppoint />
             </div>
         </>
-    ) : (
-        <Loader />
     );
 };

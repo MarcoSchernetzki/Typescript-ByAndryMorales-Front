@@ -59,11 +59,11 @@
     line-height: 120%;
     max-width: 700px;
 }
-label input {
+.form-input {
     display: flex;
     justify-content: center;
     width: 300px;
-    padding: 10px 0;
+    padding: 10px 7px;
     font-size: 16px;
     color: #000;
     margin-bottom: 30px;
@@ -71,6 +71,16 @@ label input {
     border-bottom: 1px solid #000;
     outline: none;
     background: transparent;
+}
+.form-input::placeholder {
+    color: #000;
+}
+.form-input.select {
+    padding: 10px 4px;
+}
+.form-input option {
+    background-color: #fff;
+    color: #000;
 }
 .giftCard-button {
     display: flex;
