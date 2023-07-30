@@ -3,28 +3,28 @@ import { ProductI } from '../../features/product/model/product';
 export const data: Array<ProductI> = [
     {
         id: '1',
-        name: 'diseño de cejas',
-        image: './assets/diseño-de-cejas-1.JPG',
-        price: 12,
-        category: 'servicio',
-        area: 'cejas',
-        description:
-            'Cada vez mas, la tendencia se orienta a unas cejas definidas, naturales y pobladas.',
-        isAvailable: true,
-        duration: '30 min',
-        clients: [],
-    },
-    {
-        id: '2',
-        name: 'laminado de cejas + diseño',
-        image: './assets/laminado-de-cejas-mas-diseño.jpg',
-        price: 32,
+        name: 'laminado de cejas + tinte',
+        image: './assets/laminado-de-cejas-mas-tinte.jpg',
+        price: 42,
         category: 'servicio',
         area: 'cejas',
         description:
             'No hay ceja que sea demasiado grande o demasiado pequeña para unas cejas de alta definicion, un tratamiento cosmetico que combina habilmente la remodelacion de la forma con la aplicación del maquillaje para un resultado hiper elegante.',
         isAvailable: true,
         duration: '1:30 hs',
+        clients: [],
+    },
+    {
+        id: '2',
+        name: 'Pestañas volumen medio',
+        image: './assets/pestañas-volumen-medio-1.jpg',
+        price: 65,
+        category: 'servicio',
+        area: 'pestañas',
+        description:
+            'Las extensiones volumen medio se adhieren desde 4 hasta 6 pestañas sinteticas por cada pestaña natural, dando como resultado un efecto mas voluptuoso.',
+        isAvailable: true,
+        duration: '3:30 hs',
         clients: [],
     },
     {
@@ -42,19 +42,6 @@ export const data: Array<ProductI> = [
     },
     {
         id: '4',
-        name: 'Pestañas volumen medio',
-        image: './assets/pestañas-volumen-medio-1.jpg',
-        price: 65,
-        category: 'servicio',
-        area: 'pestañas',
-        description:
-            'Las extensiones volumen medio se adhieren desde 4 hasta 6 pestañas sinteticas por cada pestaña natural, dando como resultado un efecto mas voluptuoso.',
-        isAvailable: true,
-        duration: '3:30 hs',
-        clients: [],
-    },
-    {
-        id: '5',
         name: 'Lifting de pestañas + Tinte',
         image: './assets/lifting-pestañas-mas-tinte-1.jpg',
         price: 30,
@@ -64,6 +51,32 @@ export const data: Array<ProductI> = [
             'El lifting de pestañas da un efecto de mayor longitud y espesor, llegando a todos los pelos de forma inmediata. La duracion aproximada es de 2 meses y no necesita reposicion.',
         isAvailable: true,
         duration: '1:30 hs',
+        clients: [],
+    },
+    {
+        id: '5',
+        name: 'laminado de cejas + diseño',
+        image: './assets/laminado-de-cejas-mas-diseño.jpg',
+        price: 32,
+        category: 'servicio',
+        area: 'cejas',
+        description:
+            'No hay ceja que sea demasiado grande o demasiado pequeña para unas cejas de alta definicion, un tratamiento cosmetico que combina habilmente la remodelacion de la forma con la aplicación del maquillaje para un resultado hiper elegante.',
+        isAvailable: true,
+        duration: '1:30 hs',
+        clients: [],
+    },
+    {
+        id: '6',
+        name: 'diseño de cejas',
+        image: './assets/diseño-de-cejas-1.JPG',
+        price: 12,
+        category: 'servicio',
+        area: 'cejas',
+        description:
+            'Cada vez mas, la tendencia se orienta a unas cejas definidas, naturales y pobladas.',
+        isAvailable: true,
+        duration: '30 min',
         clients: [],
     },
 ];

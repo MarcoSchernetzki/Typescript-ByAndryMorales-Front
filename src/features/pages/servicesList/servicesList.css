@@ -1,13 +1,24 @@
 .services-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 250px;
+    grid-gap: 2px;
     padding: 0;
-    width: 100%;
-    justify-items: center;
 }
 
 .services-list li {
     list-style: none;
+    cursor: pointer;
+    background: linear-gradient(180deg, rgba(0, 0, 0,0), rgba(0, 0, 0,0.35));
+}
+.services-list li:hover {
+    background: none;
+}
+.services-list li:nth-child(4) {
+    grid-row-start: span 2;
+}
+.services-list li:nth-child(2) {
+    grid-row-start: span 2;
 }
 
 .services-list-empty {
@@ -18,7 +29,7 @@
 }
 
 .services-tittle {
-    margin: 15px auto 0;
+    margin: 15px auto;
     font-size: 1.25rem;
     color: #000;
 }
@@ -27,4 +38,14 @@
     border-bottom: 2px solid #998e7dc9;
     animation: move 5s infinite;
     width: 100px;
+}
+@media (min-width: 700px) {
+    .services-list {
+        grid-template-columns: repeat(4, 1fr);
+}
+}
+@media (min-width: 1000px) {
+    .services-list {
+        grid-template-rows: 330px;
+}
 }
