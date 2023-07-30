@@ -1,0 +1,11 @@
+.container-services {
+    display: flex;
+    flex-direction: column;
+    margin: 92px auto 40px;
+    align-items: center;
+}
+.container-button {
+    position: fixed;
+    top: 80%;
+    right: 25px;
+}

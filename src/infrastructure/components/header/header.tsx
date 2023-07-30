@@ -1,10 +1,31 @@
 import { Link } from 'react-router-dom';
 import './header.css';
+import { useState } from 'react';
+import { SectionMenu } from './sectionMenu/sectionMenu';
+import { menuRoutes } from '../../constants/menuRoutes/menuRoutes';
 
-export function Header() {
+export const Header = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const handleClick = () => setIsOpen(!isOpen);
     return (
-        <header>
+        <header className="container-header">
             <div className="header-bar">
+                <img
+                    className={`bar-icon-menu ${
+                        isOpen ? 'open-menu' : 'close-menu'
+                    }`}
+                    src="../../../../assets/menu-burguer.svg"
+                    alt="menu"
+                    width="30px"
+                    onClick={handleClick}
+                />
+                <img
+                    src="../../../../assets/icon-close.svg"
+                    alt="cerrar"
+                    width="25px"
+                    className={`bar-icon-close ${isOpen && 'iconClose'}`}
+                    onClick={handleClick}
+                />
                 <Link to={'./'} className="link">
                     <img
                         src="../../../../assets/logo-andry-gota.svg"
@@ -12,15 +33,12 @@ export function Header() {
                         width="40px"
                     />
                 </Link>
-
-                <Link to={'./login'} className="link">
-                    <img
-                        src="../../../../assets/person-add.svg"
-                        alt="iniciar sesion"
-                        width="30px"
-                    />
-                </Link>
+            </div>
+            <div className={`container-menu ${isOpen ? 'open' : 'close'}`}>
+                {isOpen && (
+                    <SectionMenu sections={menuRoutes} setIsOpen={setIsOpen} />
+                )}
             </div>
         </header>
     );
-}
+};

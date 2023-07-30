@@ -1,4 +1,5 @@
 import { useKeenSlider } from 'keen-slider/react';
+import { useContext } from 'react';
 import './homePage.css';
 import 'keen-slider/keen-slider.min.css';
 import {
@@ -7,8 +8,13 @@ import {
     dataComent,
 } from '../../../infrastructure/data/data';
 import { ServicesList } from '../servicesList/servicesList';
+import { ButtonAppoint } from '../../../infrastructure/core/buttonAppoint/buttonAppoint';
+import { ProductContext } from '../../../infrastructure/context/context';
+import { Loader } from '../../../infrastructure/core/loader/loader';
 
-export function HomePage() {
+export const HomePage = () => {
+    const { handleLoader } = useContext(ProductContext);
+
     const [sliderRef] = useKeenSlider<HTMLDivElement>(
         {
             loop: true,
@@ -45,70 +51,58 @@ export function HomePage() {
         ]
     );
 
-    return (
+    return handleLoader() ? (
         <>
-            <main>
-                <div className="container-highlight">
-                    <img
-                        className="highlight-image"
-                        src="./assets/andry/andry-1.jpg"
-                        alt="andry morales"
-                        width="100%"
-                    />
-                </div>
-                <div
-                    ref={sliderRef}
-                    className="keen-slider container-certificate"
-                >
-                    {dataCertificate.map((item: string, index: number) => {
+            <div className="container-highlight">
+                <img
+                    className="highlight-image"
+                    src="./assets/andry/andry-1.jpg"
+                    alt="andry morales"
+                    width="100%"
+                />
+            </div>
+            <div ref={sliderRef} className="keen-slider container-certificate">
+                {dataCertificate.map((item: string, index: number) => {
+                    return (
+                        <li
+                            key={index}
+                            className="keen-slider__slide certificate"
+                        >
+                            <img
+                                className="certificate-image"
+                                src={item}
+                                alt="certificados"
+                                width="320px"
+                            />
+                        </li>
+                    );
+                })}
+            </div>
+            <div className="container-service">
+                <ServicesList />
+            </div>
+            <div className="container-keen-slider">
+                <div className="container-line" />
+                <p>Mis clientes dicen</p>
+                <div ref={sliderRef} className="keen-slider comments">
+                    {dataComent.map((item: DataComentType) => {
                         return (
-                            <li
-                                key={index}
-                                className="keen-slider__slide certificate"
-                            >
-                                <img
-                                    className="certificate-image"
-                                    src={item}
-                                    alt="certificados"
-                                    width="320px"
-                                />
-                            </li>
+                            <img
+                                key={item.id}
+                                className="keen-slider__slide"
+                                src={item.image}
+                                alt="comentarios de clientes"
+                                width="120px"
+                            />
                         );
                     })}
                 </div>
-                <div className="container-service">
-                    <ServicesList />
-                    <div className="divButton">
-                        <button
-                            className="button-appoint"
-                            onClick={() => {
-                                window.location.assign(
-                                    'https://widget.treatwell.es/establecimiento/100043880/servicios/'
-                                );
-                            }}
-                        >
-                            Pide tu Cita
-                        </button>
-                    </div>
-                </div>
-                <div className="container-keen-slider">
-                    <div className="container-line" />
-                    <p>Mis clientes dicen</p>
-                    <div ref={sliderRef} className="keen-slider comments">
-                        {dataComent.map((item: DataComentType) => {
-                            return (
-                                <img
-                                    key={item.id}
-                                    className="keen-slider__slide"
-                                    src={item.image}
-                                    alt="comentarios de clientes"
-                                    width="120px"
-                                />
-                            );
-                        })}
-                    </div>
-                </div>
-            </main>
+            </div>
+            <div className="container-button">
+                <ButtonAppoint />
+            </div>
         </>
+    ) : (
+        <Loader />
     );
-}
+};
