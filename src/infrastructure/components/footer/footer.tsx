@@ -17,6 +17,7 @@ export const Footer = () => {
                     <a
                         href="https://wa.me/34653538373?text=Hola,%20me%20gustaria%20reservar%20una%20cita."
                         target="_blank"
+                        rel="noreferrer"
                     >
                         <img
                             className={styles.social__icon}
@@ -28,6 +29,7 @@ export const Footer = () => {
                     <a
                         href="https://www.instagram.com/by_andrymorales/?hl=es"
                         target="_blank"
+                        rel="noreferrer"
                     >
                         <img
                             className={styles.social__icon}
@@ -39,6 +41,7 @@ export const Footer = () => {
                     <a
                         href="https://www.facebook.com/profile.php?id=100087617080427"
                         target="_blank"
+                        rel="noreferrer"
                     >
                         <img
                             className={styles.social__icon}
@@ -51,6 +54,7 @@ export const Footer = () => {
                     <a
                         href="https://www.google.com/maps/place/C.+del+Aviador+Zorita,+5,+28020+Madrid/@40.4477685,-3.6987417,17z/data=!3m1!4b1!4m6!3m5!1s0xd4228f9442292d5:0xbd20c5e3b15b5b27!8m2!3d40.4477685!4d-3.6987417!16s%2Fg%2F11b8v87gl8?entry=ttu"
                         target="_blank"
+                        rel="noreferrer"
                     >
                         <img
                             className={styles.social__icon}
