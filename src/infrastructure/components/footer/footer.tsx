@@ -86,7 +86,7 @@ export const Footer = () => {
                         <strong>domingo:</strong> cerrado
                     </p>
                     <p style={{ marginTop: '10px' }}>
-                        <strong>Correo:</strong> andryamp03@gmail.com
+                        <strong>Correo:</strong> byandrymorales@gmail.com
                     </p>
                 </div>
             </Modal>
