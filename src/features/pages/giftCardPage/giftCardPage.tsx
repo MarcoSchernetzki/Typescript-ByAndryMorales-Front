@@ -26,10 +26,8 @@ export const GiftCardPage = () => {
         })
             .then((res) => res.json())
             .then(() => {
-                window.open(
-                    'https://widget.treatwell.es/establecimiento/100043880/servicios/',
-                    '_blank'
-                );
+                window.location.href =
+                    'https://widget.treatwell.es/establecimiento/100043880/servicios/';
                 return setIsLoading(false);
             })
             .catch(() => setIsLoading(false));

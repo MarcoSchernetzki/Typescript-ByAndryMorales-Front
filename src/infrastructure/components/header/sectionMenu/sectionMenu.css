@@ -30,6 +30,7 @@
 .menu-ul :first-child {
     margin-top: 60px;
 }
+.menu-ul
 .menu-li {
     list-style: none;
     cursor: pointer;
@@ -43,4 +44,11 @@
 .menu-li:hover {
     background-color: #000000;
     font-size: 18px;
+}
+.menu-li :only-child {
+    margin-top: 0;
+}
+.menu-li p{
+    overflow: hidden;
+    height: 24px;
 }
