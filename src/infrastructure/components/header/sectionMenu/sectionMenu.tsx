@@ -24,7 +24,7 @@ export const SectionMenu = ({
                             key={item.text}
                             onClick={() => handleClick(item.path)}
                         >
-                            {item.text}
+                            <p>{item.text}</p>
                         </li>
                     );
                 })}
