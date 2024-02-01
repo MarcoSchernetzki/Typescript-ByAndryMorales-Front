@@ -52,7 +52,7 @@ export const Footer = () => {
                         />
                     </a>
                     <a
-                        href="https://www.google.com/maps/place/C.+del+Aviador+Zorita,+5,+28020+Madrid/@40.4477685,-3.6987417,17z/data=!3m1!4b1!4m6!3m5!1s0xd4228f9442292d5:0xbd20c5e3b15b5b27!8m2!3d40.4477685!4d-3.6987417!16s%2Fg%2F11b8v87gl8?entry=ttu"
+                        href="https://www.google.es/maps/place/By+Andry+Morales/@40.4288709,-3.7074863,17z/data=!3m1!4b1!4m6!3m5!1s0xd4229e1d4441ec7:0x61cc874212bc193b!8m2!3d40.4288668!4d-3.7049114!16s%2Fg%2F11vjh3wkp0?entry=ttu"
                         target="_blank"
                         rel="noreferrer"
                     >
@@ -80,7 +80,7 @@ export const Footer = () => {
                         <strong>lun a vier:</strong> 10:00 a 21:00hs
                     </p>
                     <p>
-                        <strong>sabado:</strong> 10:00 a 15:00hs
+                        <strong>sabado:</strong> 10:00 a 20:00hs
                     </p>
                     <p>
                         <strong>domingo:</strong> cerrado

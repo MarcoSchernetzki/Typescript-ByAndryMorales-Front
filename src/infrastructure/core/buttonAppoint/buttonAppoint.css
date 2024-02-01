@@ -1,23 +1,23 @@
 .button-appoint {
     width: 144px;
     height: 2.5rem;
-    color: #000;
+    color: #fff;
     font-size: 0.75rem;
     font-weight: 600;
-    background: none;
+    background: #000;
     border-radius: 50px;
-    border: solid #000 2px;
-    backdrop-filter: blur(10px);
+    border: solid #ffffffab 1px;
     transition: 0.4s linear;
     cursor: pointer;
 }
 .button-appoint:hover {
-    width: 144px;
-    height: 2.5rem;
-    color: #fff;
-    font-size: 0.75rem;
-    font-weight: 500;
-    background: #000;
-    border-radius: 50px;
-    border: solid #e6e6e6 2px;
+    color: #000;
+    background: #fff;
+    border: solid #000 1px;
+}
+@media (min-width: 700px) {
+    .button-appoint {
+        width: 250px;
+        height: 3rem;
+    }
 }

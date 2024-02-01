@@ -1,6 +1,7 @@
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { menuRoutesI } from '../../../constants/menuRoutes/menuRoutes';
 import './sectionMenu.css';
+import { useState } from 'react';
 
 export const SectionMenu = ({
     sections,
@@ -9,8 +10,11 @@ export const SectionMenu = ({
     sections: Array<menuRoutesI>;
     setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
+    const { pathname } = useLocation();
+    const [menuSelected, setMenuSelected] = useState(pathname);
     const navigate = useNavigate();
     const handleClick = (path: string) => {
+        setMenuSelected(path);
         navigate(path);
         setIsOpen(false);
     };
@@ -20,7 +24,9 @@ export const SectionMenu = ({
                 {sections.map((item) => {
                     return (
                         <li
-                            className="menu-li"
+                            className={`menu-li ${
+                                menuSelected === item.path ? 'active' : ''
+                            }`}
                             key={item.text}
                             onClick={() => handleClick(item.path)}
                         >
