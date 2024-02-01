@@ -22,22 +22,24 @@
 .menu-ul {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     margin-top: 67px;
     border-top: 1px solid #fff;
     width: 100%;
+    padding-left: 0;
+    overflow: hidden;
 }
 .menu-ul :first-child {
     margin-top: 60px;
 }
 .menu-ul
 .menu-li {
+    position: relative;
     list-style: none;
     cursor: pointer;
-    height: 50px;
+    height: 60px;
     display: flex;
     align-items: center;
-    padding-left: 10px;
+    padding-left: 30px;
     overflow: hidden;
     transition: all .4s ease-in-out;
 }
@@ -47,6 +49,13 @@
 }
 .menu-li :only-child {
     margin-top: 0;
+}
+.menu-li.active::before {
+    content: '';
+    position: absolute;
+    top: 26px;
+    left: 10px;
+    box-shadow: 5px 5px 15px 12px rgba(232, 207, 20, 0.7);
 }
 .menu-li p{
     overflow: hidden;
