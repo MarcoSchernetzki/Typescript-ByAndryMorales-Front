@@ -13,26 +13,28 @@ export const AboutMePage = () => {
                 </p>
                 <p> Actualmente llevo 4 años radicada en España, Madrid.</p>
                 <p>
-                    ByAndryMorales se encuentra en la C. del Aviador Zorita 5,
-                    en Madrid, a unos pasos de la Plaza de Azca. Las cejas y
-                    pestañas definen la mirada y, afortunadamente, son nuestra
-                    especialidad. Aquí encontrarás laminación, diseño de cejas y
-                    las extensiones de pestañas que más te gusten. ¿Te gustaría
-                    un cambio de look? ¡No te lo pienses más y reserva una cita!
+                    ByAndryMorales se encuentra en la C. de Manuela Malasaña 24,
+                    en Madrid, a unos pasos del metro Bilbao (línea 1) y del
+                    metro San Bernardo (línea 2). Las cejas y pestañas definen
+                    la mirada y, afortunadamente, son nuestra especialidad. Aquí
+                    encontrarás laminación, diseño de cejas y las extensiones de
+                    pestañas que más te gusten. ¿Te gustaría un cambio de look?
+                    ¡No lo pienses más y reserva una cita!
                 </p>
                 <p>
                     <strong>Transporte público más cercano: </strong>
-                    Este centro tiene una parada de autobús a 1 minuto andando,
-                    con las líneas 149 y C2, a 5 minutos andando tiene la parada
-                    de autobús de la línea 5 y a 6 minutos andando la estación
-                    de metro Cuatro Caminos o Nuevos Ministerios.{' '}
+                    Este centro está a 3 minutos caminando de la estación de
+                    metro de Bilbao, a 2 minutos caminando de la estación de
+                    metro de San Bernardo, a 5 minutos caminando de la estación
+                    de metro de Tribunal y cuenta con una amplia oferta de
+                    autobuses.{' '}
                 </p>
                 <p>
                     <strong>El equipo: </strong>
                     El equipo profesional de ByAndryMorales está dotado de años
                     de experiencia y conocimientos.{' '}
                 </p>
-                <strong>Lo que nos gusta de nuestro lugar: </strong>
+                <strong>Lo que nos gusta de nuestro lugar</strong>
                 <p>
                     <strong>Ambiente: </strong>
                     Cómodo, moderno y acogedor.
