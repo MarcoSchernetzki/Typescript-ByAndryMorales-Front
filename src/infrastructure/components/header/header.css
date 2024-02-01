@@ -43,12 +43,12 @@ h2 {
 .bar-icon-menu {
     z-index: 2;
     cursor: pointer;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .bar-icon-close {
     z-index: 2;
     cursor: pointer;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.2s ease-in-out;
     color: #fff;
     transform: scaleY(0);
     position: absolute;
